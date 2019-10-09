@@ -10,6 +10,5 @@ $('Name').focus('click', function(){
 $( "#clickme" ).click(function() {
     $( "#Other" ).hide( "slow", function() {
       alert( "Animation complete." );
-   
+    }) 
   });
-
