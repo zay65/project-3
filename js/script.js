@@ -21,8 +21,6 @@ $('#name').focus();
 
 
 //Theme is selected and 
-$('colors-js-puns').on('click', function() {
-$('color').show();
-});
 
 $('option[value="Select Theme"]').attr("hidden", "hidden");
+$('#color').prepend('<option value="select">Please select a T-shirt theme</option>');
