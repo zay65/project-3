@@ -1,4 +1,7 @@
 
+const theTheme = '<option selected="selected" id="selectTheme">Please select a T-shirt theme</option>';
+
+
 //Select the "Name" input element
 $('#name').focus();
 
@@ -17,14 +20,14 @@ $('#other-title').hide();
 
 
 
-
  
 
 
 
-
  if($("#design").val($("#design option:first").attr('hidden', true))) {
-    $("#color").prepend("<option>Please select a T-shirt theme</option>");
+    $('#color').prepend(theTheme).attr('disabled',true);
+
+    $("#color").show().prepend("<option>Please select a T-shirt theme</option>")
  };
 
 
