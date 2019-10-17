@@ -3,6 +3,7 @@
 $('#name').focus();
 
 //This will hide "other" input field until user clicks on the "Other" option
+$('#other-title').hide();
 
  $('#title').change (function () {
      if ($('#title').val() === 'other'){
@@ -22,21 +23,21 @@ $('#name').focus();
 
 
 
- 
-
-$("design").addEventListener("click", function(e){ 
-    
-});
+ if($("#design").val($("#design option:first").attr('hidden', true))) {
+    $("#color").prepend("<option>Please select a T-shirt theme</option>");
+ };
 
 
-$('#Select Theme').change (function () {
 
-if ($('#Select Theme').val() === 'Select Theme'){
- $('#Select Theme').hide(); 
+
+$('#design').change (function () {
+
+if ($('#design').val() === $("#design option:first")){
+ $('#design').hide(); 
 
 
 
 
 };
 
-
+});
