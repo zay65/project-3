@@ -17,10 +17,26 @@ $('#name').focus();
 
 
 
+ 
 
 
 
-//Theme is selected and 
 
-$('option[value="Select Theme"]').attr("hidden", "hidden");
-$('#color').prepend('<option value="select">Please select a T-shirt theme</option>');
+ 
+
+$("design").addEventListener("click", function(e){ 
+    
+});
+
+
+$('#Select Theme').change (function () {
+
+if ($('#Select Theme').val() === 'Select Theme'){
+ $('#Select Theme').hide(); 
+
+
+
+
+};
+
+
