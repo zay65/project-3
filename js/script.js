@@ -25,22 +25,57 @@ $('#other-title').hide();
 
 
  if($("#design").val($("#design option:first").attr('hidden', true))) {
-    $('#color').prepend(theTheme).attr('disabled',true);
+    $('#color').prepend(theTheme);
+    $('#color option[value="Tomato"]').hide().attr('selected', true);
 
-    $("#color").show().prepend("<option>Please select a T-shirt theme</option>")
- };
+    $('#color option[value="Steelblue"]').hide();
 
+ $('#color option[value="Dimgrey"]').hide();
 
-
-
-$('#design').change (function () {
-
-if ($('#design').val() === $("#design option:first")){
- $('#design').hide(); 
+  }
 
 
 
 
-};
+
+
+
+
+
+ $('#design').change (function (e) {
+
+    if ($('#design option').val() === "Theme - JS Puns"){
+        
+        $('#color option[value="Cornflowerblue"]').show();
+
+        $('#color option[value="Darkslategrey"]').show();
+    
+     $('#color option[value="Gold"]').show();
+
+     $('#color option[value="Tomato"]').hide();
+
+     $('#color option[value="Steelblue"]').hide();
+ 
+  $('#color option[value="Dimgrey"]').hide();
+
+
+    } else if  ($('design option').val === "Theme - I &#9829; JS ") { 
+        
+         
+        $('#color option[value="Tomato"]').show();
+
+        $('#color option[value="Steelblue"]').show();
+    
+     $('#color option[value="Dimgrey"]').show();
+
+     $('#color option[value="Cornflowerblue"]').hide();
+
+     $('#color option[value="Darkslategrey"]').hide();
+ 
+  $('#color option[value="Gold"]').hide();
+    }
 
 });
+
+
+
