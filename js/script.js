@@ -18,15 +18,12 @@ $('#other-title').hide();
  
 
 
-$('#design').val()
-
- 
 
 
 
  if($('#design').val($('#design option:Select Theme').attr('disabled', true))) {
 
-    $('#color option[value="tomato"]').hide().attr('selected', true);
+    $('#color option[value="tomato"]').hide();
 
     $('#color option[value="steelblue"]').hide();
 
@@ -67,9 +64,10 @@ $('#color option[value="gold"]').hide();
      $('#color option[value="steelblue"]').hide();
  
   $('#color option[value="dimgrey"]').hide();
+       
+  
 
-
-    } else if  ($('#design').val() === "heart js ") { 
+    } else if  ($('#design').val() === "heart js") { 
         
          
         $('#color option[value="tomato"]').show();
