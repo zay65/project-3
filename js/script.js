@@ -18,20 +18,30 @@ $('#other-title').hide();
  
 
 
-
+$('#design').val()
 
  
 
 
 
- if($("#design").val($("#design option:first").attr('hidden', true))) {
-    $('#color').prepend(theTheme);
-    $('#color option[value="Tomato"]').hide().attr('selected', true);
+ if($('#design').val($('#design option:Select Theme').attr('disabled', true))) {
 
-    $('#color option[value="Steelblue"]').hide();
+    $('#color option[value="tomato"]').hide().attr('selected', true);
 
- $('#color option[value="Dimgrey"]').hide();
+    $('#color option[value="steelblue"]').hide();
 
+ $('#color option[value="dimgrey"]').hide();
+
+ $('#color option[value="cornflowerblue"]').hide();
+
+ $('#color option[value="darkslategrey"]').hide();
+
+$('#color option[value="gold"]').hide();
+
+
+ 
+ 
+ $('#color').prepend(theTheme);
   }
 
 
@@ -44,35 +54,35 @@ $('#other-title').hide();
 
  $('#design').change (function (e) {
 
-    if ($('#design option').val() === "Theme - JS Puns"){
+    if ($('#design').val() === "js puns"){
         
-        $('#color option[value="Cornflowerblue"]').show();
+        $('#color option[value="cornflowerblue"]').show();
 
-        $('#color option[value="Darkslategrey"]').show();
+        $('#color option[value="darkslategrey"]').show();
     
-     $('#color option[value="Gold"]').show();
+     $('#color option[value="gold"]').show();
 
-     $('#color option[value="Tomato"]').hide();
+     $('#color option[value="tomato"]').hide();
 
-     $('#color option[value="Steelblue"]').hide();
+     $('#color option[value="steelblue"]').hide();
  
-  $('#color option[value="Dimgrey"]').hide();
+  $('#color option[value="dimgrey"]').hide();
 
 
-    } else if  ($('design option').val === "Theme - I &#9829; JS ") { 
+    } else if  ($('#design').val() === "heart js ") { 
         
          
-        $('#color option[value="Tomato"]').show();
+        $('#color option[value="tomato"]').show();
 
-        $('#color option[value="Steelblue"]').show();
+        $('#color option[value="steelblue"]').show();
     
-     $('#color option[value="Dimgrey"]').show();
+     $('#color option[value="dimgrey"]').show();
 
-     $('#color option[value="Cornflowerblue"]').hide();
+     $('#color option[value="cornflowerblue"]').hide();
 
-     $('#color option[value="Darkslategrey"]').hide();
+     $('#color option[value="darkslategrey"]').hide();
  
-  $('#color option[value="Gold"]').hide();
+  $('#color option[value="gold"]').hide();
     }
 
 });
