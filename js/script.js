@@ -51,8 +51,10 @@ $('#color option[value="gold"]').hide();
  $('#design').change (function (e) {
 
     if ($('#design').val() === "js puns"){
-        
-        $('#color option[value="cornflowerblue"]').show();
+      
+        $("option:contains('Please select a T-shirt theme')").attr('disabled', true);
+  
+        $('#color option[value="cornflowerblue"]').show().prop();
 
         $('#color option[value="darkslategrey"]').show();
     
@@ -80,7 +82,8 @@ $('#color option[value="gold"]').hide();
      $('#color option[value="darkslategrey"]').hide();
  
   $('#color option[value="gold"]').hide();
-    }
+  
+}
 
 });
 
