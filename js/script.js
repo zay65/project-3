@@ -20,8 +20,7 @@ $('#other-title').hide();
 
 
 
-
- if($('#design').val($('#design option:Select Theme').attr('disabled', true))) {
+ $("option:contains('Select Theme')").attr('disabled', true);
 
     $('#color option[value="tomato"]').hide();
 
@@ -39,7 +38,7 @@ $('#color option[value="gold"]').hide();
  
  
  $('#color').prepend(theTheme);
-  }
+  
 
 
 
@@ -65,7 +64,7 @@ $('#color option[value="gold"]').hide();
  
   $('#color option[value="dimgrey"]').hide();
        
-  
+
 
     } else if  ($('#design').val() === "heart js") { 
         
