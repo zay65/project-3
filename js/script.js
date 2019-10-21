@@ -90,5 +90,5 @@ $('#other-title').hide();
 });
 
 var divTotActCost = $('<div></div>');
- totalActCost = 0;
+ var totalActCost = 0;
  $('.activity').append(divTotActCost);
