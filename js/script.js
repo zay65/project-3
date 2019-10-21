@@ -89,5 +89,5 @@ $('#other-title').hide();
 
 });
 
-const totalActCost = 0;
-
+var totalActCost = 0;
+totalActCost.append('.activity');
