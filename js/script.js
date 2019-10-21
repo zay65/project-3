@@ -89,5 +89,6 @@ $('#other-title').hide();
 
 });
 
-var totalActCost = 0;
-totalActCost.append('.activity');
+var divTotActCost = $('<div></div>');
+ totalActCost = 0;
+ $('.activity').append(divTotActCost);
