@@ -20,24 +20,24 @@ $('#other-title').hide();
 
 
 
- $("option:contains('Select Theme')").attr('disabled', true);
+   $("option:contains('Select Theme')").attr('disabled', true);
 
-    $('#color option[value="tomato"]').hide();
+   $('#color option[value="tomato"]').hide();
 
-    $('#color option[value="steelblue"]').hide();
+   $('#color option[value="steelblue"]').hide();
 
- $('#color option[value="dimgrey"]').hide();
+   $('#color option[value="dimgrey"]').hide();
 
- $('#color option[value="cornflowerblue"]').hide();
+   $('#color option[value="cornflowerblue"]').hide();
 
- $('#color option[value="darkslategrey"]').hide();
+   $('#color option[value="darkslategrey"]').hide();
 
-$('#color option[value="gold"]').hide();
+   $('#color option[value="gold"]').hide();
 
 
  
  
- $('#color').prepend(theTheme);
+   $('#color').prepend(theTheme);
   
 
 
@@ -53,35 +53,37 @@ $('#color option[value="gold"]').hide();
     if ($('#design').val() === "js puns"){
       
         $("option:contains('Please select a T-shirt theme')").attr('disabled', true);
-  
-        $('#color option[value="cornflowerblue"]').show().prop();
+        
+        $("option:contains('Please select a T-shirt theme')").hide().removeAttr('selected');
+
+        $('#color option[value="cornflowerblue"]').show();
 
         $('#color option[value="darkslategrey"]').show();
     
-     $('#color option[value="gold"]').show();
+        $('#color option[value="gold"]').show();
 
-     $('#color option[value="tomato"]').hide();
+        $('#color option[value="tomato"]').hide();
 
-     $('#color option[value="steelblue"]').hide();
+        $('#color option[value="steelblue"]').hide();
  
-  $('#color option[value="dimgrey"]').hide();
+        $('#color option[value="dimgrey"]').hide();
        
 
 
     } else if  ($('#design').val() === "heart js") { 
         
          
-        $('#color option[value="tomato"]').show();
+        $('#color option[value="tomato"]').show().attr('selected', true);
 
         $('#color option[value="steelblue"]').show();
     
-     $('#color option[value="dimgrey"]').show();
+        $('#color option[value="dimgrey"]').show();
 
-     $('#color option[value="cornflowerblue"]').hide();
+        $('#color option[value="cornflowerblue"]').hide();
 
-     $('#color option[value="darkslategrey"]').hide();
+        $('#color option[value="darkslategrey"]').hide();
  
-  $('#color option[value="gold"]').hide();
+        $('#color option[value="gold"]').hide();
   
 }
 
