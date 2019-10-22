@@ -89,11 +89,16 @@ $('#other-title').hide();
 
 });
 
-var divTotActCost = $('<div></div>');
-$('.activity').append(divTotActCost);
-var divTotalActCost = 0;
+var actElement = $('<div></div>');
+
+$('.activities').append(actElement);
+var divTotalActivityCost = 0;
  
 
- $('.activity').change('click', function(event){
-var doEnter;
+ $('.activities').change('click', function(event){
+  var actPut = $('.activities');
+  var actPut = +$('.activities').data('data-cost');
+
+
+console.log(actPut);
  });
