@@ -100,5 +100,5 @@ var divTotalActivityCost = 0;
   var actPut = +$('.activities').data('data-cost');
 
 
-console.log(actPut);
+  console.log(typeof actPut);
  });
