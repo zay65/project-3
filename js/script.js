@@ -89,15 +89,16 @@ $('#other-title').hide();
 
 });
 
-var actElement = $('<div></div>');
+let actElement = $('<div></div>');
 
 $('.activities').append(actElement);
-var divTotalActivityCost = 0;
+let divTotalActivityCost = 0;
  
 
  $('.activities').change('click', function(event){
   var actPut = $('.activities');
-  var actPut = +$('.activities').data('data-cost');
+  var actPut = $('.activities input').eq(0).attr('data-cost');
+
 
 
   console.log(typeof actPut);
