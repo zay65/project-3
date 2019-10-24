@@ -92,8 +92,10 @@ let divTotalActivityCost = 0;
  
 
  $('.activities').change('click', function(event){
-  var actPut = $('.activities');
-  var actPut = $('.activities input').eq(0).attr('data-cost');
+  
+  const actPut = (event.target);
+  
+  const theActivityCost = $('.activities input').eq(0).attr('data-cost');
 
 
 
