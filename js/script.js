@@ -45,7 +45,19 @@ $('#other-title').hide();
        
 
  $('#design').change ('click', function (e) {
+    $('#color').children('option').eq(0).removeAttr('selected', 'selected');
 
+    $('#color').children('option').eq(3).removeAttr('selected', 'selected');
+    if($(this).val() == "") {  
+		
+	} 
+
+	$('#selectTheme').remove();
+		$('#color').removeAttr('disabled', true);
+
+	$('#color option').each(function(any,option){
+		$(option).hide(true);	
+	});
     if ($('#design').val() === "js puns"){
         $('#colors-js-puns').show();
 
@@ -53,7 +65,7 @@ $('#other-title').hide();
         
         $("option:contains('Please select a T-shirt theme')").hide().removeAttr('selected', 'selected');
 
-        $('#color option[value="cornflowerblue"]').show();
+        $('#color option[value="cornflowerblue"]').show().prop('selected', 'selected');
 
         $('#color option[value="darkslategrey"]').show();
     
@@ -68,7 +80,7 @@ $('#other-title').hide();
 
 
     } else if  ($('#design').val() === "heart js") { 
-        
+  
          
         $('#color option[value="tomato"]').show().attr('selected', 'selected');
 
@@ -81,15 +93,11 @@ $('#other-title').hide();
         $('#color option[value="darkslategrey"]').hide();
  
         $('#color option[value="gold"]').hide();
-  
-    } else { 
-        $('#color option[value="tomato"]').hide().removeAttr('disabled', 'true');
-        $('#color option[value="cornflowerblue"]').show().attr('selected', 'selected');
+   
+   
+    
+	}
 
-        $('#color option[value="darkslategrey"]').show();
- 
-        $('#color option[value="gold"]').show();
-    }
 
 });
 
