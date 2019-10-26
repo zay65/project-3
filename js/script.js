@@ -115,5 +115,4 @@ let divTotalActivityCost = 0;
 
 
 
-  console.log(typeof actPut);
  });
