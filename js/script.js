@@ -1,4 +1,4 @@
-
+//creates a variable that will later prompt users to select a theme for shirts
 const theTheme = '<option selected="selected" id="selectTheme">Please select a T-shirt theme</option>';
 
 
@@ -18,8 +18,8 @@ $('#other-title').hide();
  
 
 
-
-
+//This will hide the 'Select theme' button from users and stop it from being selected
+//all colors are hidden at first glance
    $("option:contains('Select Theme')").attr('disabled', true);
 
    $('#color option[value="tomato"]').hide();
@@ -36,14 +36,14 @@ $('#other-title').hide();
 
 
  
- 
+ //Please select a T-shirt theme variable is prepended and appears
    $('#color').prepend(theTheme);
   
 
 
 
        
-
+//Resets the drop down menu to the first color of each theme 
  $('#design').change ('click', function (e) {
     $('#color').children('option').eq(0).removeAttr('selected', 'selected');
 
@@ -57,7 +57,8 @@ $('#other-title').hide();
 
 	$('#color option').each(function(any,option){
 		$(option).hide(true);	
-	});
+    });
+    //only makes colors appropriate to js puns appear and hides i heart js colors
     if ($('#design').val() === "js puns"){
         $('#colors-js-puns').show();
 
@@ -81,7 +82,7 @@ $('#other-title').hide();
 
     } else if  ($('#design').val() === "heart js") { 
   
-         
+       //shows all colors appropriate to heart js and hides js pun colors.  
         $('#color option[value="tomato"]').show().attr('selected', 'selected');
 
         $('#color option[value="steelblue"]').show();
@@ -100,19 +101,19 @@ $('#other-title').hide();
 
 
 });
-
+//creates a dom element to display total activity cost
 let actElement = $('<div></div>');
-
+//stores in a global variable and appends it to the '.activity section so it can be shown function from the console.
 $('.activities').append(actElement);
 let divTotalActivityCost = 0;
  
-
+//event listener to make the site watch out for and respond to user action
  $('.activities').change('click', function(event){
   
-  const actPut = (event.target);
+    const actPut = $(event.target);
   
-  const theActivityCost = $('.activities input').eq(0).attr('data-cost');
+  const activityCost = $('.activities input').eq(0).attr('data-cost');
 
-
+  if (event.target === checked) += parseInt(divTotalActivityCost); 
 
  });
