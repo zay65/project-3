@@ -112,9 +112,14 @@ let divTotalActivityCost = 0;
   
     const actPut = $(event.target);
   
-  const activityCost = ('.activities input').eq(0).attr('data-cost');
+  const activityCost = $('.activities input').eq(0).attr('data-cost');
   if (actPut.is(':checked')) {
     divTotalActivityCost  += parseInt (activityCost);
-} 
+    console.log(activityCost);
+} else {
+divTotalActivityCost  -= parseInt (activityCost);
 
- });
+
+$('.activities').text('Total: $' + divTotalActivityCost);
+}});
+
