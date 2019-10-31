@@ -111,15 +111,19 @@ let divTotalActivityCost = 0;
  $('.activities').change('click', function(event){
   
     const actPut = $(event.target);
-  
+  console.log(actPut);
   const activityCost = $('.activities input').eq(0).attr('data-cost');
-  if (actPut.is(':checked')) {
+  console.log('.activities input');
+  console.log('.eq');
+  console.log(parseInt (activityCost));
+  if (actPut.checked('')) {
     divTotalActivityCost  += parseInt (activityCost);
     console.log(activityCost);
 } else {
 divTotalActivityCost  -= parseInt (activityCost);
 
-
+console.log('.activities');
+console.log('.text');
 $('.activities').text('Total: $' + divTotalActivityCost);
 }});
 
