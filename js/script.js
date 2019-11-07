@@ -112,18 +112,21 @@ let divTotalActivityCost = 0;
   
     const actPut = $(event.target);
   console.log(actPut);
-  const activityCost = $('.activities input').eq(0).attr('data-cost');
-  console.log('.activities input');
-  console.log('.eq');
-  console.log(parseInt (activityCost));
-  if (actPut.checked('')) {
+  const activityCost = $('.activities input').eq(0).attr('data-cost').replace(/[^\d]/, '');
+  console.log(activityCost);
+ 
+  
+  if ((actPut.checked(':checked'))) {
     divTotalActivityCost  += parseInt (activityCost);
-    console.log(activityCost);
+ 
 } else {
-divTotalActivityCost  -= parseInt (activityCost);
+          divTotalActivityCost  -= parseInt (activityCost);
 
-console.log('.activities');
-console.log('.text');
-$('.activities').text('Total: $' + divTotalActivityCost);
+
+
+$('.activities div').text('Total: $' + divTotalActivityCost);
+
+const checkingActivity = actPut.attr('data-day-and-time');
+
 }});
 
