@@ -142,10 +142,4 @@ const checkingActivity = actPut.attr('data-day-and-time');
 console.log(checkingActivity);
 
 
-$('.activities input').change(function(input,[i]){
-const checkBox = $('.activities input').attr('data-day-and-time');
-console.log(checkBox);
-});
-
-
 }});
