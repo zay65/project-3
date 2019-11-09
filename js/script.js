@@ -112,11 +112,11 @@ let divTotalActivityCost = 0;
   
     const actPut = $(event.target);
   console.log(actPut);
-  const activityCost = $('.activities input').eq(0).attr('data-cost').replace(/[^\d]/, '');
+  const activityCost = parseInt($('.activities input').eq(0).attr('data-cost').slice(1));
   console.log(activityCost);
  
   
-  if ((actPut.checked(':checked'))) {
+  if (actPut.checked(':checked')) {
     divTotalActivityCost  += parseInt (activityCost);
  
 } else {
@@ -126,7 +126,15 @@ let divTotalActivityCost = 0;
 
 $('.activities div').text('Total: $' + divTotalActivityCost);
 
+//stops and dsiables the activities that conflict during the same day and time
 const checkingActivity = actPut.attr('data-day-and-time');
+console.log(checkingActivity);
+
+
+$('.activities input').change(function(input,[i]){
+const checkBox = $('.activities input').attr('data-day-and-time');
+console.log(checkBox);
+});
+
 
 }});
-
