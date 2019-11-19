@@ -119,7 +119,8 @@ let divTotalActivityCost = 0;
       if (event.target.checked) {
        divTotalActivityCost  += parseInt (activityCost);
 
-      } $('.activities div').text('Total: $' + divTotalActivityCost);
+      }  else divTotalActivityCost  -= parseInt (activityCost);
+      $('.activities div').text('Total: $' + divTotalActivityCost);
 
      //stops and dsiables the activities that conflict during the same day and time
       const checkingActivity = actPut.attr('data-day-and-time');
@@ -131,7 +132,7 @@ let divTotalActivityCost = 0;
        console.log(checkBox);
 }); 
       {
-          divTotalActivityCost  -= parseInt (activityCost);
+          
 
 
 
