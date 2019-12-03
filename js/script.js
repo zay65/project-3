@@ -127,7 +127,7 @@ let divTotalActivityCost = 0;
       console.log(checkingActivity);
 
        //conflicting activities
-       $('.activities input').change(function(input,[i]){
+       $('.activities input').on(function(input,[i]){
        const checkBox = $('.activities input').attr('data-day-and-time');
        console.log(checkBox);
 }); 
@@ -143,6 +143,8 @@ const checkingActivity = actPut.attr('data-day-and-time');
 console.log(checkingActivity);
 
 for(let i=0;i <= $activities.length; i++) {
+    
+    $activities[i] = event.target;
     let loo = $activities[i];
 
            if ($(actPut).attr('data-day-and-time') == $(loo).attr('data-day-and-time') &&
