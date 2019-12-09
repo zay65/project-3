@@ -144,11 +144,12 @@ console.log(checkingActivity);
 
 for(let i=0;i <= $activities.length; i++) {
     
-    $activities[i] = event.target;
-    let loo = $activities[i];
+   
+    let $loo = $('.activities[i]');
 
+    let $actput = $(event.target);
            if ($(actPut).attr('data-day-and-time') == $(loo).attr('data-day-and-time') &&
-          $(actput) != loo) {
+          $(actput) != $loo) {
        
        if ($(actput).attr("checked")) {
           $(loo).attr('disabled', true);
