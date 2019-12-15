@@ -130,7 +130,7 @@ let divTotalActivityCost = 0;
        $('.activities input').on(function(input,[i]){
        const checkBox = $('.activities input').attr('data-day-and-time');
        console.log(checkBox);
-}); 
+       }); 
       {
           
 
