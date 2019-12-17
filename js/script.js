@@ -141,7 +141,7 @@ let divTotalActivityCost = 0;
 //stops and dsiables the activities that conflict during the same day and time
 const checkingActivity = actPut.attr('data-day-and-time');
 console.log(checkingActivity);
-
+const $activities = $('.activities div');
 for(let i=0;i <= $activities.length; i++) {
     
    
