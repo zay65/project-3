@@ -145,7 +145,7 @@ const $activities = $('.activities div');
 for(let i=0;i <= $activities.length; i++) {
     
    
-    let $loo = $('.activities[i]');
+    let $loo = $('.activities div');
 
     let $actPut = $(event.target);
            if ($(actPut).attr('data-day-and-time') == $(loo).attr('data-day-and-time') &&
