@@ -147,11 +147,11 @@ for(let i=0;i <= $activities.length; i++) {
    
     let $loo = $('.activities[i]');
 
-    let $actput = $(event.target);
+    let $actPut = $(event.target);
            if ($(actPut).attr('data-day-and-time') == $(loo).attr('data-day-and-time') &&
-          $(actput) != $loo) {
+          $(actPut) !== $loo) {
        
-       if ($(actput).attr("checked")) {
+       if ($(actPut).attr("checked")) {
           $(loo).attr('disabled', true);
           $($clicked).attr('disabled', false);
        } else
