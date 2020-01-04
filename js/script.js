@@ -119,9 +119,9 @@ let divTotalActivityCost = 0;
       if (event.target.checked) {
        divTotalActivityCost  += parseInt (activityCost);
 
-      }  else divTotalActivityCost  -= parseInt (activityCost);
+      }   else { divTotalActivityCost  -= parseInt (activityCost); 
       $('.activities div').text('Total: $' + divTotalActivityCost);
-
+      }
      //stops and dsiables the activities that conflict during the same day and time
       const checkingActivity = actPut.attr('data-day-and-time');
       console.log(checkingActivity);
@@ -152,11 +152,11 @@ for(let i=0;i <= $activities.length; i++) {
           $(actPut) !== $loo) {
        
        if ($(actPut).attr("checked")) {
-          $(loo).attr('disabled', true);
+          $loo.attr('disabled', true);
           $($clicked).attr('disabled', false);
-       } else
-       $(loo).attr('disabled', true);
-       
+       } else {
+       $loo.attr('disabled', true);
+       }
     }; 
    
 
