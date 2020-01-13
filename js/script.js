@@ -541,7 +541,7 @@ for(let i=0;i <= $activities.length; i++) {
    let $actPut = $(event.target);
 
 
-          if ($(actPut).attr('data-day-and-time') == $(loo).attr('data-day-and-time') &&
+          if ($(actPut).attr('data-day-and-time') == $loo.attr('data-day-and-time') &&
 
 
          $(actPut) !== $loo) {
@@ -553,7 +553,7 @@ for(let i=0;i <= $activities.length; i++) {
       if ($(actPut).attr("checked")) {
 
 
-         $(loo).attr('disabled', true);
+         $loo.attr('disabled', true);
 
 
          $($clicked).attr('disabled', false);
@@ -562,7 +562,7 @@ for(let i=0;i <= $activities.length; i++) {
       } else
 
 
-      $(loo).attr('disabled', true);
+      $loo.attr('disabled', true);
 
 
      
