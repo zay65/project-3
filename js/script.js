@@ -409,16 +409,16 @@ $('.activities').change('click', function(event){
 
 
 
-     const actPut = $(event.target);
+     let actPut = $(event.target);
 
 
-     console.log(actPut);
+     
 
 
       const activityCost = parseInt($(event.target).eq(0).attr('data-cost').slice(1));
 
 
-     console.log(activityCost);
+     
 
 
 
@@ -457,7 +457,7 @@ $('.activities').change('click', function(event){
      const checkingActivity = actPut.attr('data-day-and-time');
 
 
-     console.log(checkingActivity);
+     
 
 
 
@@ -515,7 +515,7 @@ $('.activities').change('click', function(event){
 const checkingActivity = actPut.attr('data-day-and-time');
 
 
-console.log(checkingActivity);
+
 
 
 const $activities = $('.activities div');
