@@ -458,7 +458,7 @@ $('.activities').change('click', function(event){
     //stops and dsiables the activities that conflict during the same day and time
 
 
-     const checkingActivity = actPut.attr('data-day-and-time');
+     const checkingActivity = $(actPut).attr('data-day-and-time');
 
 
      
@@ -516,7 +516,7 @@ $('.activities').change('click', function(event){
 //stops and dsiables the activities that conflict during the same day and time
 
 
-const checkingActivity = actPut.attr('data-day-and-time');
+const checkingActivity = $(actPut).attr('data-day-and-time');
 
 
 
@@ -583,4 +583,4 @@ for(let i=0;i <= $activities.length; i++) {
 
 
 
-}}});
+}};
