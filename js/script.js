@@ -403,54 +403,25 @@ let divTotalActivityCost = 0;
 
 
 $('.activities').change('click', function(event){
-
-
-
-
-
-
-     let actPut = $(event.target);
-
-
-     
-
-
-      const activityCost = parseInt($(event.target).eq(0).attr('data-cost').slice(1));
-
-
-     console.log(activityCost);
-
-
-
-
-
-
-
-
-
-
-     if (event.target.checked) {
-
-
-      divTotalActivityCost  += parseInt (activityCost);
-
-
-
-
-
-
-
-     }  else divTotalActivityCost  -= parseInt (activityCost);
-
-
-     $('.activities div').text('Total: $' + divTotalActivityCost);
-
-
-
-     let $loo = $('.activities input');
+   let actPut = $(event.target);
+   const activityCost = parseInt($(event.target).eq(0).attr('data-cost').slice(1));
+   console.log(activityCost);
+​
+    if (event.target.checked) {
+     divTotalActivityCost  += parseInt (activityCost);
+​
+    }  else { 
+      divTotalActivityCost  -= parseInt (activityCost);
+    }
+​
+    $('.activities div').text('Total: $' + divTotalActivityCost);
+​
+    let $loo = $('.activities input');
+ 
+    $(actPut).attr('data-day-and-time')
+​
+    // insert new code here
   
-     $(actPut).attr('data-day-and-time')
-   
 });
 
 
@@ -513,7 +484,7 @@ $('.activities').change('click', function(event){
 
 
 
-//stops and dsiables the activities that conflict during the same day and time
+//stops and disables the activities that conflict during the same day and time
 
 
 const checkingActivity = $(actPut).attr('data-day-and-time');
