@@ -415,143 +415,88 @@ $('.activities').change('click', function(event){
     }
 ​
     $('.activities div').text('Total: $' + divTotalActivityCost);
+
+        // get list of activities & data day/time value for current element
+        let $activities = $('.activities input');
+        ​
+             // insert new code here
+             
+             for (let i=0; i<= $activities.length; i++) {
+              console.log('test');
+                if ($(actPut).attr('data-day-and-time') == $loo.attr('data-day-and-time') && $(actPut) !== $loo) {
+           
+           
+                
+           
+           
+                 if ($(actPut).attr("checked")) {
+           
+           
+                    $loo.attr('disabled', true);
+           
+           
+                    $($clicked).attr('disabled', false);
+           
+           
+                 } else {
+           
+           
+                 $loo.attr('disabled', true);
+           
+                 }
+                
+           
+           
+              }
+        ​
+            }
+           
+        });
+
 ​
-    let $loo = $('.activities input');
- 
-    $(actPut).attr('data-day-and-time')
-​
-    // insert new code here
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
-});
 
 
-
-    //stops and dsiables the activities that conflict during the same day and time
-
-
-     const checkingActivity = $(actPut).attr('data-day-and-time');
-
-
-     
+ 
 
 
 
 
 
-
-
-      //conflicting activities
-
-
-      $('.activities input').on(function(input,[i]){
-
-
-      const checkBox = $('.activities input').attr('data-day-and-time');
-
-
-      console.log(checkBox);
-
-
-      });
-
-
-     {
 
 
         
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-       $('.activities div').text('Total: $' + divTotalActivityCost);
-
-
-
-
-
-
-
-//stops and disables the activities that conflict during the same day and time
-
-
-const checkingActivity = $(actPut).attr('data-day-and-time');
-
-
-
-
-
-const $activities = $('.activities div');
-
-
-for(let i=0;i <= $activities.length; i++) {
-
-
-  
-
-
- 
-
-
-   let $loo = $('.activities input');
-
-
-
-
-
-
-
-   let $actPut = $(event.target);
-
-
-          if ($(actPut).attr('data-day-and-time') == $loo.attr('data-day-and-time') &&
-
-
-         $(actPut) !== $loo) {
-
-
      
 
 
-      if ($(actPut).attr("checked")) {
-
-
-         $loo.attr('disabled', true);
-
-
-         $($clicked).attr('disabled', false);
-
-
-      } else
-
-
-      $loo.attr('disabled', true);
-
-
-     
-
-
-   };
-
-
- 
-
-
-
-
-
-
-
-}};
+      
