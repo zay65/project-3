@@ -418,7 +418,7 @@ $('.activities').change('click', function(event){
       const activityCost = parseInt($(event.target).eq(0).attr('data-cost').slice(1));
 
 
-     
+     console.log(activityCost);
 
 
 
