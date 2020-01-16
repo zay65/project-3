@@ -447,7 +447,11 @@ $('.activities').change('click', function(event){
 
 
 
-
+     let $loo = $('.activities input');
+  
+     $(actPut).attr('data-day-and-time')
+   
+});
 
 
 
@@ -530,7 +534,7 @@ for(let i=0;i <= $activities.length; i++) {
  
 
 
-   let $loo = $('.activities div');
+   let $loo = $('.activities input');
 
 
 
