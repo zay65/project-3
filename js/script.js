@@ -406,10 +406,9 @@ $('.activities').change('click', function(event){
    let actPut = $(event.target);
    const activityCost = parseInt($(event.target).eq(0).attr('data-cost').slice(1));
    console.log(activityCost);
-​
     if (event.target.checked) {
      divTotalActivityCost  += parseInt (activityCost);
-​
+
     }  else { 
       divTotalActivityCost  -= parseInt (activityCost);
     }
@@ -419,15 +418,18 @@ $('.activities').change('click', function(event){
         // get list of activities & data day/time value for current element
         let $activities = $('.activities input');
         ​
-             // insert new code here
+             // insert new code here 
              
              for (let i=0; i<= $activities.length; i++) {
               console.log('test');
-                if ($(actPut).attr('data-day-and-time') == $loo.attr('data-day-and-time') && $(actPut) !== $loo) {
+                let $loo = $activities.getAttribute('data-day-and-time');
+
+                
+              if ($(actPut).attr('data-day-and-time') == $loo.attr('data-day-and-time') && $(actPut) !== $loo) {
            
            
                 
-           
+         
            
                  if ($(actPut).attr("checked")) {
            
