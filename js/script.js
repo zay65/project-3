@@ -412,17 +412,17 @@ $('.activities').change('click', function(event){
     }  else { 
       divTotalActivityCost  -= parseInt (activityCost);
     }
-​
+
     $('.activities div').text('Total: $' + divTotalActivityCost);
 
         // get list of activities & data day/time value for current element
         let $activities = $('.activities input');
-        ​
+
              // insert new code here 
-             
+
              for (let i=0; i<= $activities.length; i++) {
               console.log('test');
-                let $loo = $activities.getAttribute('data-day-and-time');
+              let $loo = $activities.eq(i);
 
                 
               if ($(actPut).attr('data-day-and-time') == $loo.attr('data-day-and-time') && $(actPut) !== $loo) {
@@ -450,12 +450,9 @@ $('.activities').change('click', function(event){
            
            
               }
-        ​
             }
            
         });
-
-​
    
 
 
@@ -471,34 +468,3 @@ $('.activities').change('click', function(event){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
- 
-
-
-
-
-
-
-
-        
-
-
-     
-
-
-      
