@@ -1,5 +1,4 @@
 
-
 //creates a variable that will later prompt users to select a theme for shirts
 
 
@@ -425,39 +424,46 @@ $('.activities').change('click', function(event){
               console.log('test');
               let $loo = $activities.eq(i);
 
-              
-              if ($(actPut).attr("js-frameworks").attr("js-libs") == actPut.prop("checked")) {
+                
+              if ($(actPut).attr('data-day-and-time') == $loo.attr('data-day-and-time') && $(actPut) !== $loo) {
+           
            
                 
          
            
-                ($(actPut).attr("checked")) 
+                 if ($(actPut).attr("checked")) {
            
            
                     $loo.attr('disabled', true);
            
            
-                    
+                    $($clicked).attr('disabled', false);
            
            
-                 } 
-              
+                 } else {
            
            
-                if  ($($loo).attr("checked")) {
-                 $actPut.attr('disabled', true);
-                 
-             }
+                 $loo.attr('disabled', true);
+           
+                 }
                 
-
-      { 
            
            
               }
             }
-          
-});
+           
+        });
    
+
+
+
+
+
+
+
+
+
+
 
 
 
