@@ -443,7 +443,7 @@ $('.activities').change('click', function(event){
                  } else {
            
            
-                 $loo.attr('disabled', true);
+                 $loo.attr('disabled', false);
            
                  }
                 
