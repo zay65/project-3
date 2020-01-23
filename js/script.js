@@ -425,7 +425,7 @@ $('.activities').change('click', function(event){
               let $loo = $activities.eq(i);
 
                 
-              if ($(actPut).attr('data-day-and-time') == $loo.attr('data-day-and-time') && $(actPut) !== $loo) {
+              if ($(actPut).attr('data-day-and-time') == $loo.attr('data-day-and-time') && $(actPut).attr('name')  !== $loo.attr('name') ) {
            
            
                 
@@ -437,7 +437,7 @@ $('.activities').change('click', function(event){
                     $loo.attr('disabled', true);
            
            
-                    $($clicked).attr('disabled', false);
+                    
            
            
                  } else {
