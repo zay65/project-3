@@ -431,7 +431,7 @@ $('.activities').change('click', function(event){
                 
          
            
-                 if ($(actPut).attr("checked")) {
+                if ($(actPut).prop("checked")) {
            
            
                     $loo.attr('disabled', true);
