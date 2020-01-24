@@ -460,7 +460,8 @@ $('.activities').change('click', function(event){
         
         //selects the "Credit Card" option by default in the payment info dropdown menu
         if  ($('#payment option[value="Credit Card"]').show().attr('selected', 'selected')) {
-      $('#credit-card').hide().attr('disabled', true);
+      $('#paypal').hide().attr('disabled', true);
+      $('#bitcoin').hide().attr('disabled', true);
         };
  
     
