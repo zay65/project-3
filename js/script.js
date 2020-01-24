@@ -418,13 +418,14 @@ $('.activities').change('click', function(event){
         // get list of activities & data day/time value for current element
         let $activities = $('.activities input');
 
-             // insert new code here 
-
+           
+//makes code repeat in a loop
              for (let i=0; i<= $activities.length; i++) {
               console.log('test');
+              //helps target each individual activity in the for loop
               let $loo = $activities.eq(i);
 
-                
+              //helps disable specific activity from being clicked if its opposite activity will conflict at same time and is checked and vice versa
               if ($(actPut).attr('data-day-and-time') == $loo.attr('data-day-and-time') && $(actPut).attr('name')  !== $loo.attr('name') ) {
            
            
@@ -454,9 +455,12 @@ $('.activities').change('click', function(event){
            
         });
    
+        //disables the user from being able to select "Select Payment Method" on payment info dropdown menu
         $("#payment option[value='select method']").hide().attr('disabled', true);
+        
+        //selects the "Credit Card" option by default in the payment info dropdown menu
         if  ($('#payment option[value="Credit Card"]').show().attr('selected', 'selected')) {
-      $('#credit-card').hide();
+      $('#credit-card').hide().attr('disabled', true);
         };
  
     
