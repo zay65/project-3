@@ -454,7 +454,7 @@ $('.activities').change('click', function(event){
            
         });
    
-
+        $("#payment option[value='select method']").hide().attr('disabled', true);
         if  ($('#payment option[value="Credit Card"]').show().attr('selected', 'selected')) {
       $('#credit-card').hide();
         };
