@@ -455,9 +455,11 @@ $('.activities').change('click', function(event){
         });
    
 
-
-
-
+        if  ($('#payment option[value="Credit Card"]').show().attr('selected', 'selected')) {
+      $('#credit-card').hide();
+        };
+ 
+    
 
 
 
