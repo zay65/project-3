@@ -455,19 +455,35 @@ $('.activities').change('click', function(event){
            
         });
    
-        //disables the user from being able to select "Select Payment Method" on payment info dropdown menu
-        $("#payment option[value='select method']").hide().attr('disabled', true);
+           //disables the user from being able to select "Select Payment Method" on payment info dropdown menu
+           $('#payment option[value="select method"]').hide().attr('disabled', true);
+          
+
+           //selects the "Credit Card" option by default in the payment info dropdown menu
+           if  ($('#payment option[value="Credit Card"]').show().attr('selected', true)) {
+         $('#paypal').hide().attr('disabled', true);
+         $('#bitcoin').hide().attr('disabled', true);
+           
+           };
         
-        //selects the "Credit Card" option by default in the payment info dropdown menu
-        if  ($('#payment option[value="Credit Card"]').show().attr('selected', 'selected')) {
-      $('#paypal').hide().attr('disabled', true);
-      $('#bitcoin').hide().attr('disabled', true);
-        };
+        
+        
+        
+        
+    
+       
+   
+   
+   
+   
+
+    
  
     
-
-
-
+        
+      
+ 
+  
 
 
 
