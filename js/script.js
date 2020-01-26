@@ -464,10 +464,21 @@ $('.activities').change('click', function(event){
          $('#paypal').hide().attr('disabled', true);
          $('#bitcoin').hide().attr('disabled', true);
            
+           } if ($('#payment option').val() === "PayPal" ) {
+            $('#paypal').show().attr('disabled', false );
+            $('#credit-card').hide().attr('disabled', true);
+            $('#bitcoin').hide().attr('disabled', true);
+        
+        
+          } if ($('#payment option').val() === "Bitcoin" ) {
+            $('#bitcoin').show().attr('disabled', false );
+            $('#credit-card').hide().attr('disabled', true);
+            $('#paypal').hide().attr('disabled', true);
+        
+        
            };
-        
-        
-        
+
+           ;
         
         
     
