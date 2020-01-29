@@ -454,40 +454,76 @@ $('.activities').change('click', function(event){
             }
            
         });
-   
-           //disables the user from being able to select "Select Payment Method" on payment info dropdown menu
-           $('#payment option[value="select method"]').hide().attr('disabled', true);
-          
-
-           //selects the "Credit Card" option by default in the payment info dropdown menu
-           if  ($('#payment option[value="Credit Card"]').show().attr('selected', true)) {
-         $('#paypal').hide().attr('disabled', true);
-         $('#bitcoin').hide().attr('disabled', true);
-           
-           } if ($('#payment option').val() === "PayPal" ) {
-            $('#paypal').show().attr('disabled', false );
-            $('#credit-card').hide().attr('disabled', true);
-            $('#bitcoin').hide().attr('disabled', true);
-        
-        
-          } if ($('#payment option').val() === "Bitcoin" ) {
-            $('#bitcoin').show().attr('disabled', false );
-            $('#credit-card').hide().attr('disabled', true);
-            $('#paypal').hide().attr('disabled', true);
-        
-        
-           };
-
-           ;
-        
-        
-    
        
-   
-   
-   
-   
+ //disables the user from being able to select "Select Payment Method" on payment info dropdown menu and selects the "Credit Card" option by default in the payment info dropdown menu
+ $('#payment option[value="select method"]').hide(true);
 
+ //variables to access the options in the payment dropdown menu
+        const $paymentSelection = $('#payment')
+        const creditCard = $('#credit-card')
+        const bitCoin = $('#bitcoin')
+        const payPal= $('#paypal')
+        
+       
+        $('#bitcoin').hide();
+        $('#paypal').hide();
+       
+
+           
+         //event listener that updates the payment info section to change based on what the user selects to pay with
+
+           $paymentSelection.on('change', function() {
+           
+           
+           
+//shows credit card info and hides bitcoin and paypal info
+            if ($paymentSelection.val() === 'Credit Card') {
+              $('#credit-card').show();
+              $('#bitcoin').hide();
+              $('#paypal').hide();
+           
+//shows paypal info and hides credit card and bitcoin info
+            } else if ($paymentSelection.val() === 'PayPal') {
+              $('#paypal').show(); 
+              $('#credit-card').hide();
+              $('#bitcoin').hide();
+             
+                   
+//shows bitcoin info and hides credit card  and paypal info   
+            } else if ($paymentSelection.val() === 'Bitcoin') {
+              $('#bitcoin').show();
+              $('#paypal').hide(); 
+              $('#credit-card').hide();
+            }
+          });
+
+          //Users must fill out the name box before registering or get an error message
+       const nameInput = document.getElementById("name");
+      
+       
+       //Users must fill out their email or get an error message
+       const emailInput = document.getElementById("mail");
+
+ //Users must select at least one activity or they'll get an error message so I have main conference as that one activity.
+      const oneActSel = document.getElementById("all");
+     
+     //Users must input card info if they select credit card as payment
+      const creditInput = document.getElementById("cc-num");
+      
+      //Users must input zipcode if credit card is selected
+      const zipInput =  document.getElementById("zip");
+   
+      //Users must input cvv info if they select card
+      const cvvInput = document.getElementById("cvv");
+   
+      //Must be a valid name
+      function isValidName(name) {}
+
+      //Must fill out email box or get an error message
+      function isValidEmail(email) {}
+
+      //Must select one activity or get an error message
+      function isValidActivitySelect(all) {}
     
  
     
