@@ -522,8 +522,7 @@ $('.activities').change('click', function(event){
       //Must fill out email box or get an error message
       function isValidEmail(email) {}
 
-      //Must select one activity or get an error message
-      function isValidActivitySelect(all) {}
+  
     
  
     
