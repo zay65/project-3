@@ -118,14 +118,16 @@ $paymentSelection.on('change', function() {
 let enterName = document.getElementById("name");
 console.log(enterName);
 
-document.querySelector('button[type="submit"]').addEventListener('click', (event) => { 
-const  nameIsValid = () => {
 const keep = /^[A-Za-z]+\s?([A-Za-z]+)?$/; 
+
+document.querySelector('button[type="submit"]').addEventListener('submit', (event) => { 
+const  nameIsValid = () => {
+
 if(keep.test(enterName)) {
 console.log(nameIsValid);
 	event.preventDefault();	
-	return true;
-} else {
 	return false;
+} else {
+	return true;
 }
 }});
