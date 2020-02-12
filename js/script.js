@@ -124,13 +124,13 @@ document.querySelector('form').addEventListener('submit', event => {
 const keep = /^[A-Za-z]+\s?([A-Za-z]+)?$/; 
 
 document.querySelector('button[type="submit"]').addEventListener('submit', (event) => { 
-const nameIsValid() => {
+const nameIsValid = () => {
 
 if(keep.test(enterName.value)) {
-console.log(nameIsValid);
-	event.preventDefault();	
+nameIsValid();
+
 	return false;
-} else {
+} else 	event.preventDefault();	 {
 	return true;
 }
 }});
