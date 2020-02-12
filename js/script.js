@@ -114,16 +114,19 @@ $paymentSelection.on('change', function() {
 		$('#credit-card').hide();
 	}
 }); 
-
+const  nameIsValid;
 let enterName = document.getElementById("name");
 console.log(enterName);
-
+ 
+document.querySelector('form').addEventListener('submit', event => {
+	event.preventDefault();
+  });
 const keep = /^[A-Za-z]+\s?([A-Za-z]+)?$/; 
 
 document.querySelector('button[type="submit"]').addEventListener('submit', (event) => { 
-const  nameIsValid = () => {
+const nameIsValid() => {
 
-if(keep.test(enterName)) {
+if(keep.test(enterName.value)) {
 console.log(nameIsValid);
 	event.preventDefault();	
 	return false;
