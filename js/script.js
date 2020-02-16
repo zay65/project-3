@@ -120,9 +120,16 @@ const email = document.querySelector("#email");
 const name = document.querySelector("#name");
 
 if (name.value === '') {
+return false
 
-
+}else{ 
+	return true
 }
+
+
+
+
+
 
 
 
@@ -135,4 +142,4 @@ if (name.value === '') {
 
 document.querySelector('form').addEventListener('submit', event => {
 	event.preventDefault();
-  });
+  })
