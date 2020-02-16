@@ -119,7 +119,10 @@ const form = document.querySelector("form");
 const email = document.querySelector("#email");
 const name = document.querySelector("#name");
 
-name.value === 
+if (name.value === '') {
+
+
+}
 
 
 
