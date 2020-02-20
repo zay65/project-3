@@ -119,15 +119,17 @@ const form = document.querySelector("form");
 const email = document.querySelector("#email");
 const name = document.querySelector("#name");
 
+function checkName() {
 if (name.value === '') {
 return false
 
 }else{ 
-	return true
+	return true;
 }
 
 
 
+};
 
 
 
@@ -135,11 +137,3 @@ return false
 
 
 
-
-
-
-	
-
-document.querySelector('form').addEventListener('submit', event => {
-	event.preventDefault();
-  })
