@@ -119,17 +119,26 @@ const form = document.querySelector("form");
 const email = document.querySelector("#email");
 const name = document.querySelector("#name");
 
-function checkName() {
-if (name.value === '') {
-return false
+function checkName(name){
+	const emptyString = /^$/;
+	if (name.value === '') {
+		return false;
+	  } else {
+		return true;
+	}
+ 
+//    return /^[a-z]+$/.test(name) &&
+//   /^[A-Z]+$/.test(name) &&
+//    /^[0-9]+$/.test(name);
 
-}else{ 
-	return true;
-}
+
+
 
 
 
 };
+
+
 
 
 
