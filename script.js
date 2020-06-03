@@ -87,21 +87,23 @@ $('.activities').change('click', function(event) {
 	}
 });
 //disables the user from being able to select "Select Payment Method" on payment info dropdown menu and selects the "Credit Card" option by default in the payment info dropdown menu
-$('#payment option[value="select method"]').hide(true);
+$('#payment option[value="select method"]').remove(true);
 //variables to access the options in the payment dropdown menu
-const $paymentSelection = $('#payment')
+const $paymentSelection = $('#credit-card')
 const creditCard = $('#credit-card')
 const bitCoin = $('#bitcoin')
 const payPal = $('#paypal')
 $('#bitcoin').hide();
 $('#paypal').hide();
+$("#SelectMenu").val('credit-card');
 //event listener that updates the payment info section to change based on what the user selects to pay with
 $paymentSelection.on('change', function() {
 	//shows credit card info and hides bitcoin and paypal info
 	if ($paymentSelection.val() === 'Credit Card') {
 		$('#credit-card').show();
 		$('#bitcoin').hide();
-		$('#paypal').hide();
+        $('#paypal').hide();
+        $('#select method').prop('disabled' ,true);
 		//shows paypal info and hides credit card and bitcoin info
 	} else if ($paymentSelection.val() === 'PayPal') {
 		$('#paypal').show();
@@ -214,6 +216,10 @@ $('.container').submit( (e) => {
 
 
 
+
+
+
+ 
 
 
 
